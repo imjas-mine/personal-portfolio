@@ -9,7 +9,7 @@ const About = () => {
         </h1>
         <div className="flex w-full h-fit">
           
-          <div className="text-white w-[50%] flex flex-col justify-center items-center text-xl pr-10 pl-32">
+          <div className="text-white w-[50%] flex flex-col justify-center items-center text-xl pr-10 pl-20">
             <p>
               Hi! I am Jasmine.🙋‍♂️
                     <br />
