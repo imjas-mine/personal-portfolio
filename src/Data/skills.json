@@ -1,0 +1,36 @@
+{
+    "skills": [
+      {
+        "title": "Java"
+       
+      },
+     
+      {
+        "title": "SQL Server"
+    
+      },
+      {
+        "title": "Spring Framework"
+       
+      },
+      {
+        "title": "React.js"
+    
+      },
+      {
+        "title": "Tailwind CSS"
+    
+      },
+      {
+        "title": "SmartGWT"
+       
+    
+      },
+      {
+        "title": "Microservices"
+    
+      }
+      
+    ]
+  }
+  

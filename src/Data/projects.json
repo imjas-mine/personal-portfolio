@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "title": "Simple e-commerce website",
+      "start_date": "Jan 2025",
+      "end_date": "currently working",
+      
+      "description": "Developed a full-stack e-commerce application using java and Spring boot, implementing RESTful APIs for product management. Designed and integrated CRUD operations for products and utitlized h2 with hibernate for persistence.\nTo be done: implementing search functionality, implementing spring security, custom user login, verify user login,changing database connection from in-memory to file-based.",
+      "skills": [
+        "Java",
+        "Spring boot",
+        "React.js",
+        "Spring data JPA",
+        "H2 database",
+        "Hibernate"
+      ],
+      "image":"e-com_project.png",
+      "url":"https://github.com/imjas-mine/e-commerce-web-app"
+      },
+      {
+        "title": "Personal Portfolio Website",
+        "start_date": "July 2024",
+        "end_date": "currently working",
+        
+        "description": "An interactive personal portfolio built using React, showcasing my skills, projects, and professional experience. The website is deployed on Vercel for fast and reliable hosting. It uses resuable React components,utilizing hooks and managing state. It uses tailwind CSS for styling UI. The website displays data such as skills and projects using JSON format, which is processed and rendered in components. ",
+        "skills": [
+          "React.js",
+          "Tailwind CSS",
+          "Vercel for hosting",
+          "JSON"
+  
+        ],
+        "image":"personalportfolio.png",
+        "url":"#"
+        }
+        
+      
+    ]
+  }
+  
