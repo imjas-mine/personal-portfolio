@@ -1,39 +1,44 @@
 import React from "react";
-import {getImageUrl} from "../utils";
+import { getImageUrl } from "../utils";
+
 const About = () => {
   return (
-    <div id="about" className="bg-gradient-to-r from-[#151b34]  to-[#030d35] flex flex-col justify-center items-center font-roboto ">
-      <div className="bg-slate-950 w-[85%] flex flex-col items-center h-[600px] mt-20">
-        <h1 className="bg-gradient-to-r from-pink-500 to-purple-600 font-bold text-5xl bg-clip-text text-transparent py-10">
+    <div
+      id="about"
+      className="bg-gradient-to-r from-[#151b34] to-[#030d35] flex flex-col justify-center items-center font-roboto px-4"
+    >
+      <div className="bg-slate-950 w-[90%] max-w-[1200px] flex flex-col items-center py-10 mt-20 rounded-lg shadow-lg">
+        <h1 className="bg-gradient-to-r from-pink-500 to-purple-600 font-bold text-5xl bg-clip-text text-transparent py-6">
           ABOUT
         </h1>
-        <div className="flex w-full h-fit">
+        
+        {/* Content Wrapper */}
+        <div className="flex flex-col md:flex-row w-full h-fit items-center">
           
-          <div className="text-white w-[50%] flex flex-col justify-center items-center text-xl pr-10 pl-20">
+          {/* Text Section */}
+          <div className="text-white w-full md:w-[50%] flex flex-col  text-lg md:text-xl p-6 md:p-10">
             <p>
-              Hi! I am Jasmine.🙋‍♂️
-                    <br />
-                    <br />
-              <p>
-                I am pursuing Software Engineering Technology, I'm set to
-                graduate in April 2026. I am currently working as a Software Developer co-op
-                at <span className="font-bold">Ricoh</span> where I 
-                have honed my skills in Java, Spring boot and smartGWT. I have also worked 
-                  at VARLab as a Software Developer where I honed my skills in front-end using React Framework.
-                
-              </p>
-             
+              Hi! I am Jasmine.🙋‍♀️
             </p>
             <br />
             <p>
-              I am also working with the city of kitchener in customer service, 
-              where I develop valuable communication and teamwork skills. This combination of technical knowledge and interpersonal experience allows me to approach problems from a well-rounded perspective, ensuring that I can both meet user needs and deliver innovative solutions in a professional setting.
+              I am pursuing Software Engineering Technology, and I'm set to
+              graduate in April 2026. Currently, I work as a Software Developer Co-op
+              at <span className="font-bold">Ricoh</span>, where I hone my skills in <span className="font-bold">Java, Spring Boot, SQL Server and SmartGWT </span>.  
+              I have also worked at <span className="font-bold">VARLab</span> as a Software Developer, focusing on <span className="font-bold">React.js Frontend Development.</span>
             </p>
-           
+            <br />
+            <p>
+              Additionally, I work with the City of Kitchener in customer service, where I develop strong communication and teamwork skills.  
+              My combination of technical expertise and interpersonal experience enables me to deliver well-rounded solutions that meet user needs effectively.
+            </p>
           </div>
-          <div className="w-[50%] flex  justify-center items-center ">
-            <img className="h-[400px]" src={getImageUrl("about.jpg")} alt="" />
+
+          {/* Image Section */}
+          <div className="w-full md:w-[50%] flex justify-center items-center mt-6 md:mt-0">
+            <img className="h-[250px] md:h-[400px] rounded-lg shadow-md" src={getImageUrl("about.jpg")} alt="About Me" />
           </div>
+
         </div>
       </div>
     </div>
