@@ -23,7 +23,11 @@ const About = () => {
             <br />
             <p>
               I am pursuing Software Engineering Technology, and I'm set to
-              graduate in April 2026. Currently, I work as a Software Developer Co-op
+              graduate in April 2026. I was honored to receive a regional scholarship for academic excellence, recognizing my dedication and achievements in the field.
+              </p>
+              <br></br>
+              <p>
+              Currently, I work as a Software Developer Co-op
               at <span className="font-bold">Ricoh</span>, where I hone my skills in <span className="font-bold">Java, Spring Boot, SQL Server and SmartGWT </span>.  
               I have also worked at <span className="font-bold">VARLab</span> as a Software Developer, focusing on <span className="font-bold">React.js Frontend Development.</span>
             </p>
