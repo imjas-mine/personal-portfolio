@@ -5,7 +5,7 @@
       "start_date": "Jan 2025",
       "end_date": "currently working",
       
-      "description": "Developed a full-stack e-commerce application using java and Spring boot, implementing RESTful APIs for product management. Designed and integrated CRUD operations for products and utitlized h2 with hibernate for persistence.\nTo be done: implementing search functionality, implementing spring security, custom user login, verify user login,changing database connection from in-memory to file-based.",
+      "description": "Developed a full-stack e-commerce application using java and Spring boot, implementing RESTful APIs for product management. Designed and integrated CRUD operations for products and utitlized h2 with hibernate for persistence.\nDeveloped a custom search feature using JPA and SQL, allowing users to retrieve products dynamically based on multiple fields. Implemented spring security to verify user login",
       "skills": [
         "Java",
         "Spring boot",
