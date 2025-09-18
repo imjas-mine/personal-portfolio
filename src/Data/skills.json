@@ -10,7 +10,7 @@
     
       },
       {
-        "title": "Spring Framework"
+        "title": "Spring Boot"
        
       },
       {
@@ -22,12 +22,16 @@
     
       },
       {
-        "title": "SmartGWT"
+        "title": "UiPath Automation"
        
     
       },
       {
         "title": "Microservices"
+    
+      },
+      {
+        "title": "Git"
     
       }
       
