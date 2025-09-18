@@ -16,11 +16,11 @@ const Hero = () => {
         <div className="text-2xl text-white mt-7">
           <TypeAnimation
             sequence={[
-              "I am a student of Software Engineering Technology.",
+              "I am a Software Developer.",
               1000,
               "I am a curious learner.",
               1000,
-              "I am a Software Developer.",
+              "I love turning problems into solutions :)",
               1000,
             ]}
             wrapper="span"
