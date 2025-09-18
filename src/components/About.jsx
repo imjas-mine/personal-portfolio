@@ -11,38 +11,47 @@ const About = () => {
         <h1 className="bg-gradient-to-r from-pink-500 to-purple-600 font-bold text-5xl bg-clip-text text-transparent py-6">
           ABOUT
         </h1>
-        
+
         {/* Content Wrapper */}
         <div className="flex flex-col md:flex-row w-full h-fit items-center">
-          
           {/* Text Section */}
           <div className="text-white w-full md:w-[50%] flex flex-col  text-lg md:text-xl p-6 md:p-10">
-            <p>
-              Hi! I am Jasmine.🙋‍♀️
-            </p>
+            <p>Hi! I am Jasmine.🙋‍♀️</p>
             <br />
             <p>
               I am pursuing Software Engineering Technology, and I'm set to
-              graduate in April 2026. I was honored to receive a regional scholarship for academic excellence, recognizing my dedication and achievements in the field.
-              </p>
-              <br></br>
-              <p>
-              Currently, I work as a Software Developer Co-op
-              at <span className="font-bold">Ricoh</span>, where I hone my skills in <span className="font-bold">Java, Spring Boot, SQL Server and SmartGWT </span>.  
-              I have also worked at <span className="font-bold">VARLab</span> as a Software Developer, focusing on <span className="font-bold">React.js Frontend Development.</span>
+              graduate in April 2026. I was honored to receive a regional
+              scholarship for academic excellence, recognizing my dedication and
+              achievements in the field.
+            </p>
+            <br></br>
+
+            <p>
+              I am a software developer with hands-on experience in front-end,
+              back-end, and automation technologies. My technical background
+              includes building responsive interfaces with React.js, developing
+              scalable services with Java Spring Boot and SQL databases, and
+              streamlining business processes through UiPath automation.
+              
             </p>
             <br />
             <p>
-              Additionally, I work with the City of Kitchener in customer service, where I develop strong communication and teamwork skills.  
-              My combination of technical expertise and interpersonal experience enables me to deliver well-rounded solutions that meet user needs effectively.
+              Alongside my technical expertise, I bring strong communication and
+              teamwork skills, allowing me to collaborate effectively and
+              deliver solutions that are both technically sound and
+              user-focused. I enjoy solving problems, learning new technologies,
+              and contributing to projects that create meaningful impact.
             </p>
           </div>
 
           {/* Image Section */}
           <div className="w-full md:w-[50%] flex justify-center items-center mt-6 md:mt-0">
-            <img className="h-[250px] md:h-[400px] rounded-lg shadow-md" src={getImageUrl("about.jpg")} alt="About Me" />
+            <img
+              className="h-[250px] md:h-[400px] rounded-lg shadow-md"
+              src={getImageUrl("about.jpg")}
+              alt="About Me"
+            />
           </div>
-
         </div>
       </div>
     </div>
