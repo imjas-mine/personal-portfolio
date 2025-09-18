@@ -1,10 +1,20 @@
 {
   "projects": [
     {
+      "title": "Vet Blog Website",
+      "start_date": "July 202",
+      "end_date": "currently working",
+
+"description": "Building a full-stack blogging website for a veterinary Doctor, combining a React.js front end with Spring Boot RESTful APIs on the back end. The application features secure JWT authentication, allowing only admin to create, update, and delete blog posts. A PostgreSQL database manages user accounts and blog content, ensuring data reliability and scalability. On the front end, I designed a responsive UI with Tailwind CSS, delivering a seamless experience across desktop and mobile devices. This website will be hosted soon",
+      "skills": ["React.js", "Tailwind CSS", "Spring Boot", "PostgreSQL","JWT","REST APIs"],
+      "image": "vetBlog.png",
+      "url": "https://github.com/imjas-mine/Vet-blog-website"
+    },
+    {
       "title": "Simple e-commerce website",
       "start_date": "Jan 2025",
       "end_date": "currently working",
-      
+
       "description": "Developed a full-stack e-commerce application using java and Spring boot, implementing RESTful APIs for product management. Designed and integrated CRUD operations for products and utitlized h2 with hibernate for persistence.\nDeveloped a custom search feature using JPA and SQL, allowing users to retrieve products dynamically based on multiple fields. Implemented spring security to verify user login",
       "skills": [
         "Java",
@@ -14,27 +24,18 @@
         "H2 database",
         "Hibernate"
       ],
-      "image":"e-com_project.png",
-      "url":"https://github.com/imjas-mine/e-commerce-web-app"
-      },
-      {
-        "title": "Personal Portfolio Website",
-        "start_date": "July 2024",
-        "end_date": "currently working",
-        
-        "description": "An interactive personal portfolio built using React, showcasing my skills, projects, and professional experience. The website is deployed on Vercel for fast and reliable hosting. It uses resuable React components,utilizing hooks and managing state. It uses tailwind CSS for styling UI. The website displays data such as skills and projects using JSON format, which is processed and rendered in components. ",
-        "skills": [
-          "React.js",
-          "Tailwind CSS",
-          "Vercel for hosting",
-          "JSON"
-  
-        ],
-        "image":"personalportfolio.png",
-        "url":"#"
-        }
-        
-      
-    ]
-  }
-  
+      "image": "e-com_project.png",
+      "url": "https://github.com/imjas-mine/e-commerce-web-app"
+    },
+    {
+      "title": "Personal Portfolio Website",
+      "start_date": "July 2024",
+      "end_date": "currently working",
+
+      "description": "An interactive personal portfolio built using React, showcasing my skills, projects, and professional experience. The website is deployed on Vercel for fast and reliable hosting. It uses resuable React components,utilizing hooks and managing state. It uses tailwind CSS for styling UI. The website displays data such as skills and projects using JSON format, which is processed and rendered in components. ",
+      "skills": ["React.js", "Tailwind CSS", "Vercel for hosting", "JSON"],
+      "image": "personalportfolio.png",
+      "url": "#"
+    }
+  ]
+}
