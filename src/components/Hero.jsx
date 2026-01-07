@@ -54,30 +54,6 @@ const Hero = () => {
                 View My Work
               </a>
             </div>
-
-            {/* Social Links */}
-            <div className="flex items-center justify-center lg:justify-start gap-6">
-              <a
-                href="https://github.com/imjas-mine"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-slate-500 hover:text-white transition-colors"
-              >
-                <FaGithub size={24} />
-                <span className="text-sm">GitHub</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jasmine-kaur-852207229/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-slate-500 hover:text-purple-400 transition-colors"
-              >
-                <FaLinkedin size={24} />
-                <span className="text-sm">LinkedIn</span>
-              </a>
-              <span className="text-slate-700">|</span>
-              <span className="text-slate-500 text-sm">jasminkaur5858@gmail.com</span>
-            </div>
           </div>
 
           {/* Profile Image */}
