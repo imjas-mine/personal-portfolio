@@ -1,43 +1,119 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false);    //to check if it's mobile view or desktop view to collapse or display navbar
+  const [nav, setNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    const handleNav=()=>{
-        setNav(!nav);
-    }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  const handleLinkClick = () => {
+    setNav(false);
+  };
+
+  const navLinks = [
+    { href: '#about', label: 'About' },
+    { href: '#work', label: 'Experience' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#contact', label: 'Contact' },
+  ];
 
   return (
-    <div className='bg-gradient-to-r from-[#151b34]  to-[#030d35] h-[100px] text-gray-400 mx-auto flex justify-around items-center font-roboto sticky top-0 z-10'>
-        <a href="#">
-
-        <img className="w-12 h-12 cursor-pointer" src="https://cdn2.iconfinder.com/data/icons/devops-soft-fill/60/Developer-dev-female-person-user-avatar-programmer-512.png" alt="" />
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'py-4 bg-[#0a0a0f]/80 backdrop-blur-lg border-b border-white/5'
+        : 'py-6 bg-transparent'
+      }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+        {/* Logo */}
+        <a href="#" className="text-2xl font-bold text-white">
+          Jasmine<span className="text-purple-500">.</span>
         </a>
-        <ul className='hidden md:flex font-md text-xl '>
-            <li className='p-5 hover:text-white' ><a href='#about'>About</a></li>
-            <li className='p-5 hover:text-white' ><a href='#work'>Work</a></li>
-            <li className='p-5 hover:text-white' ><a href='#projects'>Project</a></li>
-            <li className='p-5 hover:text-white' ><a href='#skills'>Skills</a></li>
-            <li className='p-5 hover:text-white' ><a href='#contact'>Contact</a></li>
-        </ul>
-      <div onClick={handleNav} className=" md:hidden">
-            {nav?<AiOutlineClose className='hover:fill-white' size={20}/>:<AiOutlineMenu className='hover:fill-white' size={20}/>}
-      </div>
-      <div className={nav?'fixed h-full top-0 left-0 w-[40%] bg-black ease-in-out duration-500':'fixed left-[-100%]'}>
-      <h1 className='bg-gradient-to-r from-pink-500 to-purple-600 font-bold text-3xl bg-clip-text text-transparent ml-4 h-[100px] flex  justify-center items-center'>Jasmine</h1>
-        <ul className=' font-md text-xl flex flex-col justify-center items-center '>
-            <li className='p-5 hover:text-white' ><a href='#about'>About</a></li>
-            <li className='p-5 hover:text-white' ><a href='#work'>Work</a></li>
-            <li className='p-5 hover:text-white' ><a href='#projects'>Project</a></li>
-            <li className='p-5 hover:text-white' ><a href='#skills'>Skills</a></li>
-            <li className='p-5 hover:text-white' ><a href='#contact'>Contact</a></li>
-        </ul>
-      </div>
-   
-    </div>
-  )
-}
 
-export default Navbar
+        {/* Desktop Navigation */}
+        <ul className='hidden md:flex items-center gap-10'>
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="text-slate-400 hover:text-white transition-colors text-sm font-medium"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Contact Button */}
+        <a
+          href="#contact"
+          className="hidden md:inline-flex px-6 py-2.5 bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium rounded-lg transition-colors"
+        >
+          Let's Talk
+        </a>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={handleNav}
+          className="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
+          aria-label="Toggle menu"
+        >
+          {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${nav ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}>
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={handleNav}></div>
+
+        <div className={`absolute top-0 right-0 h-full w-72 bg-[#0a0a0f] border-l border-purple-500/20 transition-transform duration-300 ${nav ? 'translate-x-0' : 'translate-x-full'
+          }`}>
+          <div className="p-8">
+            <button
+              onClick={handleNav}
+              className="absolute top-6 right-6 p-2 text-slate-400 hover:text-white"
+            >
+              <AiOutlineClose size={24} />
+            </button>
+
+            <ul className="mt-16 space-y-6">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={handleLinkClick}
+                    className="block text-lg text-slate-300 hover:text-purple-400 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+              <li className="pt-4">
+                <a
+                  href="#contact"
+                  onClick={handleLinkClick}
+                  className="block w-full py-3 text-center text-white bg-purple-600 rounded-lg font-medium"
+                >
+                  Let's Talk
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
