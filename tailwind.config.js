@@ -4,22 +4,26 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-     keyframes:{
-      float:{
-        '0%':{transform:'translateY(0)'},
-        '50%':{transform:'translateY(-10px)'},
-        '100%':{transform:'translateY(0)'},
-      }
-     },
-     animation:{
-      float:'float 3s ease-in-out infinite'
-     },
-      backgroundImage: {
-        "primary-gradient":
-          "linear-gradient(90deg, [#576cbc] 70%,rgba(255,255,255,0) 120% )",
+      colors: {
+        primary: {
+          400: '#c084fc',
+          500: '#a855f7',
+          600: '#9333ea',
+        },
+        dark: {
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#0a0f1c',
+        }
       },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        inter: ['Inter', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
       },
     },
   },

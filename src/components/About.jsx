@@ -3,58 +3,74 @@ import { getImageUrl } from "../utils";
 
 const About = () => {
   return (
-    <div
-      id="about"
-      className="bg-gradient-to-r from-[#151b34] to-[#030d35] flex flex-col justify-center items-center font-roboto px-4"
-    >
-      <div className="bg-slate-950 w-[90%] max-w-[1200px] flex flex-col items-center py-10 mt-20 rounded-lg shadow-lg">
-        <h1 className="bg-gradient-to-r from-pink-500 to-purple-600 font-bold text-5xl bg-clip-text text-transparent py-6">
-          ABOUT
-        </h1>
+    <section id="about" className="py-24 bg-[#0a0a0f]">
+      {/* Subtle grid pattern for continuity with hero */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:80px_80px]"></div>
 
-        {/* Content Wrapper */}
-        <div className="flex flex-col md:flex-row w-full h-fit items-center">
-          {/* Text Section */}
-          <div className="text-white w-full md:w-[50%] flex flex-col  text-lg md:text-xl p-6 md:p-10">
-            <p>Hi! I am Jasmine.🙋‍♀️</p>
-            <br />
-            <p>
-              I am pursuing Software Engineering Technology, and I'm set to
-              graduate in April 2026. I was honored to receive a regional
-              scholarship for academic excellence, recognizing my dedication and
-              achievements in the field.
-            </p>
-            <br></br>
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            About Me
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+            A little bit about who I am and what I do
+          </p>
+        </div>
 
-            <p>
-              I am a software developer with hands-on experience in front-end,
-              back-end, and automation technologies. My technical background
-              includes building responsive interfaces with React.js, developing
-              scalable services with Java Spring Boot and SQL databases, and
-              streamlining business processes through UiPath automation.
-              
-            </p>
-            <br />
-            <p>
-              Alongside my technical expertise, I bring strong communication and
-              teamwork skills, allowing me to collaborate effectively and
-              deliver solutions that are both technically sound and
-              user-focused. I enjoy solving problems, learning new technologies,
-              and contributing to projects that create meaningful impact.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image */}
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-br from-purple-600/20 to-violet-500/10 rounded-2xl blur-2xl"></div>
+            <img
+              className="relative w-full rounded-2xl border border-purple-500/20"
+              src={getImageUrl("about.jpg")}
+              alt="About Jasmine"
+            />
           </div>
 
-          {/* Image Section */}
-          <div className="w-full md:w-[50%] flex justify-center items-center mt-6 md:mt-0">
-            <img
-              className="h-[250px] md:h-[400px] rounded-lg shadow-md"
-              src={getImageUrl("about.jpg")}
-              alt="About Me"
-            />
+          {/* Content */}
+          <div className="space-y-6">
+            <div className="space-y-4 text-slate-300 text-lg leading-relaxed">
+              <p>
+                I'm a Software Engineering Technology student at Conestoga College,
+                graduating in April 2026. I was honored to receive a regional scholarship
+                for academic excellence.
+              </p>
+
+              <p>
+                I'm a software developer with hands-on experience in full-stack development
+                and automation. I've built responsive interfaces with React.js, developed
+                scalable backend services with Java Spring Boot, and created process
+                automation solutions with UiPath.
+              </p>
+
+              <p>
+                What drives me is the opportunity to solve real problems with clean,
+                maintainable code. I enjoy collaborating with teams, learning new
+                technologies, and building products that make a difference.
+              </p>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-3 gap-4 pt-6">
+              <div className="text-center p-4 bg-white/5 border border-white/10 rounded-xl">
+                <div className="text-3xl font-bold text-purple-400">3</div>
+                <div className="text-sm text-slate-500 mt-1">Co-op Terms</div>
+              </div>
+              <div className="text-center p-4 bg-white/5 border border-white/10 rounded-xl">
+                <div className="text-3xl font-bold text-purple-400">20+</div>
+                <div className="text-sm text-slate-500 mt-1">Projects</div>
+              </div>
+              <div className="text-center p-4 bg-white/5 border border-white/10 rounded-xl">
+                <div className="text-3xl font-bold text-purple-400">2026</div>
+                <div className="text-sm text-slate-500 mt-1">Graduating</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
